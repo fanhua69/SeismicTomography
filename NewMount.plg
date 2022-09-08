@@ -1,0 +1,274 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: NewMount - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP2265.BAT" with contents
+[
+@echo off
+copy "hlp\NewMount.cnt" .\Debug
+]
+Creating command line "C:\WINDOWS\TEMP\RSP2265.BAT"
+Creating temporary file "C:\WINDOWS\TEMP\RSP2266.BAT" with contents
+[
+@echo off
+start /wait hcw /C /E /M "hlp\NewMount.hpj"
+if errorlevel 1 goto :Error
+if not exist "hlp\NewMount.hlp" goto :Error
+copy "hlp\NewMount.hlp" .\Debug
+goto :done
+:Error
+echo hlp\NewMount.hpj(1) : error:
+type "hlp\NewMount.log"
+:done
+]
+Creating command line "C:\WINDOWS\TEMP\RSP2266.BAT"
+Creating command line "rc.exe /l 0x804 /fo"Debug/NewMount.res" /d "_DEBUG" /d "_AFXDLL" "D:\FH\NewMount\NewMount.rc"" 
+Copying contents file...
+        1 file(s) copied
+Making help file...
+        1 file(s) copied
+Creating temporary file "C:\WINDOWS\TEMP\RSP22F4.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/NewMount.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\FH\NewMount\ChildFrm.cpp"
+"D:\FH\NewMount\DataGroup.cpp"
+"D:\FH\NewMount\Fltdata.cpp"
+"D:\FH\NewMount\Fstbrk.cpp"
+"D:\FH\NewMount\GMkEqua.cpp"
+"D:\FH\NewMount\MainFrm.cpp"
+"D:\FH\NewMount\memequa.cpp"
+"D:\FH\NewMount\MountDoc.cpp"
+"D:\FH\NewMount\MountView.cpp"
+"D:\FH\NewMount\NewMount.cpp"
+"D:\FH\NewMount\NewNet.cpp"
+"D:\FH\NewMount\ProgDlg.cpp"
+"D:\FH\NewMount\Project.cpp"
+"D:\FH\NewMount\Scdata.cpp"
+"D:\FH\NewMount\Shotpar.cpp"
+"D:\FH\NewMount\StRcv.cpp"
+"D:\FH\NewMount\Svdata.cpp"
+"D:\FH\NewMount\Svsys.cpp"
+"D:\FH\NewMount\Trace.cpp"
+"D:\FH\NewMount\Welldep.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP22F4.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP22F5.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/NewMount.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\FH\NewMount\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP22F5.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP22F6.TMP" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/NewMount.pdb" /debug /machine:I386 /out:"Debug/NewMount.exe" /pdbtype:sept 
+.\Debug\ChildFrm.obj
+.\Debug\DataGroup.obj
+.\Debug\Fltdata.obj
+.\Debug\Fstbrk.obj
+.\Debug\GMkEqua.obj
+.\Debug\MainFrm.obj
+.\Debug\memequa.obj
+.\Debug\MountDoc.obj
+.\Debug\MountView.obj
+.\Debug\NewMount.obj
+.\Debug\NewNet.obj
+.\Debug\ProgDlg.obj
+.\Debug\Project.obj
+.\Debug\Scdata.obj
+.\Debug\Shotpar.obj
+.\Debug\StdAfx.obj
+.\Debug\StRcv.obj
+.\Debug\Svdata.obj
+.\Debug\Svsys.obj
+.\Debug\Trace.obj
+.\Debug\Welldep.obj
+.\Debug\NewMount.res
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP22F6.TMP"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ChildFrm.cpp
+DataGroup.cpp
+Fltdata.cpp
+D:\FH\NewMount\Fltdata.cpp(81) : warning C4244: 'initializing' : conversion from 'long' to 'float', possible loss of data
+D:\FH\NewMount\Fltdata.cpp(82) : warning C4244: 'initializing' : conversion from 'long' to 'float', possible loss of data
+Fstbrk.cpp
+D:\FH\NewMount\Fstbrk.cpp(59) : warning C4018: '!=' : signed/unsigned mismatch
+GMkEqua.cpp
+D:\FH\NewMount\GMkEqua.cpp(521) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\GMkEqua.cpp(521) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\GMkEqua.cpp(526) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\GMkEqua.cpp(526) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\GMkEqua.cpp(330) : warning C4101: 'nHigh' : unreferenced local variable
+D:\FH\NewMount\GMkEqua.cpp(330) : warning C4101: 'nLow' : unreferenced local variable
+MainFrm.cpp
+memequa.cpp
+D:\FH\NewMount\memequa.cpp(9) : warning C4273: 'CMemEquation::CMemEquation' : inconsistent dll linkage.  dllexport assumed.
+D:\FH\NewMount\memequa.cpp(42) : warning C4273: 'Use' : inconsistent dll linkage.  dllexport assumed.
+D:\FH\NewMount\memequa.cpp(94) : warning C4018: '!=' : signed/unsigned mismatch
+D:\FH\NewMount\memequa.cpp(289) : warning C4273: 'Close' : inconsistent dll linkage.  dllexport assumed.
+D:\FH\NewMount\memequa.cpp(320) : warning C4273: 'CMemEquation::~CMemEquation' : inconsistent dll linkage.  dllexport assumed.
+D:\FH\NewMount\memequa.cpp(355) : warning C4273: 'AppeEqua' : inconsistent dll linkage.  dllexport assumed.
+D:\FH\NewMount\memequa.cpp(407) : warning C4273: 'GetEqua' : inconsistent dll linkage.  dllexport assumed.
+D:\FH\NewMount\memequa.cpp(423) : warning C4018: '<' : signed/unsigned mismatch
+D:\FH\NewMount\memequa.cpp(577) : warning C4273: 'Resolve' : inconsistent dll linkage.  dllexport assumed.
+D:\FH\NewMount\memequa.cpp(699) : warning C4273: 'ReadX' : inconsistent dll linkage.  dllexport assumed.
+D:\FH\NewMount\memequa.cpp(765) : warning C4273: 'Construct' : inconsistent dll linkage.  dllexport assumed.
+D:\FH\NewMount\memequa.cpp(802) : warning C4273: 'ReadAnswer' : inconsistent dll linkage.  dllexport assumed.
+D:\FH\NewMount\memequa.cpp(819) : warning C4273: 'SetErrorLimit' : inconsistent dll linkage.  dllexport assumed.
+MountDoc.cpp
+MountView.cpp
+D:\FH\NewMount\MountView.cpp(130) : warning C4244: 'argument' : conversion from 'double' to 'long', possible loss of data
+D:\FH\NewMount\MountView.cpp(133) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(133) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(134) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(134) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(173) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\FH\NewMount\MountView.cpp(174) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\FH\NewMount\MountView.cpp(175) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\FH\NewMount\MountView.cpp(176) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\FH\NewMount\MountView.cpp(193) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(193) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(196) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(196) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(204) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(204) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(207) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(207) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(420) : warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(432) : warning C4305: '=' : truncation from 'const double' to 'float'
+D:\FH\NewMount\MountView.cpp(451) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(451) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(454) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(454) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(457) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(457) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(457) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\FH\NewMount\MountView.cpp(475) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(475) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(478) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(478) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(481) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(481) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(481) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\FH\NewMount\MountView.cpp(491) : warning C4305: '=' : truncation from 'const double' to 'float'
+D:\FH\NewMount\MountView.cpp(705) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\FH\NewMount\MountView.cpp(706) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\FH\NewMount\MountView.cpp(707) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\FH\NewMount\MountView.cpp(708) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\FH\NewMount\MountView.cpp(725) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(725) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(728) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(728) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(736) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(736) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(739) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(739) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(945) : warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(957) : warning C4305: '=' : truncation from 'const double' to 'float'
+D:\FH\NewMount\MountView.cpp(982) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\FH\NewMount\MountView.cpp(987) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(987) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(988) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(988) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(989) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(989) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(1012) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\FH\NewMount\MountView.cpp(1017) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(1017) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(1018) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(1018) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(1019) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(1019) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\MountView.cpp(1028) : warning C4305: '=' : truncation from 'const double' to 'float'
+D:\FH\NewMount\MountView.cpp(831) : warning C4101: 'k' : unreferenced local variable
+NewMount.cpp
+NewNet.cpp
+D:\FH\NewMount\NewNet.cpp(116) : warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
+D:\FH\NewMount\NewNet.cpp(118) : warning C4244: '=' : conversion from 'float' to 'long', possible loss of data
+D:\FH\NewMount\NewNet.cpp(240) : warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\NewNet.cpp(287) : warning C4244: 'initializing' : conversion from 'double' to 'long', possible loss of data
+D:\FH\NewMount\NewNet.cpp(288) : warning C4244: 'initializing' : conversion from 'double' to 'long', possible loss of data
+D:\FH\NewMount\NewNet.cpp(289) : warning C4244: 'initializing' : conversion from 'double' to 'long', possible loss of data
+D:\FH\NewMount\NewNet.cpp(290) : warning C4244: 'initializing' : conversion from 'double' to 'long', possible loss of data
+D:\FH\NewMount\NewNet.cpp(347) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\FH\NewMount\NewNet.cpp(348) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\FH\NewMount\NewNet.cpp(349) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\FH\NewMount\NewNet.cpp(350) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+ProgDlg.cpp
+Project.cpp
+Scdata.cpp
+D:\FH\NewMount\Scdata.cpp(95) : warning C4244: 'initializing' : conversion from 'long' to 'float', possible loss of data
+D:\FH\NewMount\Scdata.cpp(134) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\FH\NewMount\Scdata.cpp(153) : warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+D:\FH\NewMount\Scdata.cpp(169) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Scdata.cpp(169) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+Shotpar.cpp
+D:\FH\NewMount\Shotpar.cpp(199) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+StRcv.cpp
+Svdata.cpp
+Svsys.cpp
+Trace.cpp
+D:\FH\NewMount\Trace.cpp(308) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(308) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(319) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(319) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(320) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(320) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(329) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(329) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(332) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(332) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(333) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(333) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(334) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(334) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(354) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(355) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(355) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(358) : warning C4244: '=' : conversion from 'double' to 'long', possible loss of data
+D:\FH\NewMount\Trace.cpp(391) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(391) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(399) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(399) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(408) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(408) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(416) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(416) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(426) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(426) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(433) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(433) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(443) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(443) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(450) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(450) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(480) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+D:\FH\NewMount\Trace.cpp(480) : warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+Welldep.cpp
+Generating Code...
+Linking...
+   Creating library Debug/NewMount.lib and object Debug/NewMount.exp
+LINK : warning LNK4049: locally defined symbol ""public: bool __thiscall CMemEquation::Resolve(void)" (?Resolve@CMemEquation@@QAE_NXZ)" imported
+LINK : warning LNK4049: locally defined symbol ""public: double * __thiscall CMemEquation::ReadX(void)" (?ReadX@CMemEquation@@QAEPANXZ)" imported
+LINK : warning LNK4049: locally defined symbol ""public: bool __thiscall CMemEquation::Use(class CString,class CString,class CString,int,double *)" (?Use@CMemEquation@@QAE_NVCString@@00HPAN@Z)" imported
+LINK : warning LNK4049: locally defined symbol ""public: bool __thiscall CMemEquation::Close(void)" (?Close@CMemEquation@@QAE_NXZ)" imported
+LINK : warning LNK4049: locally defined symbol ""public: bool __thiscall CMemEquation::AppeEqua(class CObArray &,double)" (?AppeEqua@CMemEquation@@QAE_NAAVCObArray@@N@Z)" imported
+LINK : warning LNK4049: locally defined symbol ""public: __thiscall CMemEquation::~CMemEquation(void)" (??1CMemEquation@@QAE@XZ)" imported
+LINK : warning LNK4049: locally defined symbol ""public: bool __thiscall CMemEquation::Construct(class CString,class CString,long)" (?Construct@CMemEquation@@QAE_NVCString@@0J@Z)" imported
+LINK : warning LNK4049: locally defined symbol ""public: __thiscall CMemEquation::CMemEquation(void)" (??0CMemEquation@@QAE@XZ)" imported
+
+
+
+<h3>Results</h3>
+NewMount.exe - 0 error(s), 147 warning(s)
+</pre>
+</body>
+</html>
